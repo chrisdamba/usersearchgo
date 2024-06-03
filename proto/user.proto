@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "proto/";
+
+message User {
+  int32 id = 1;
+  string fname = 2;
+  string city = 3;
+  string phone = 4;
+  float height = 5;
+  bool married = 6;
+}
+
+message UserIdRequest {
+  int32 id = 1;
+}
+
+message UserListRequest {
+  repeated int32 ids = 1;
+}
+
+message UserSearchRequest {
+  string fname = 1;
+  string city = 2;
+  string phone = 3;
+  bool married = 4;
+}
+
+// UserResponse is used to return a single user
+message UserResponse {
+  User user = 1;
+}
+
+// UserListResponse is used to return a list of users
+message UserListResponse {
+  repeated User users = 1;
+}
+
+// UserService defines the gRPC service for managing users
+service UserService {
+  rpc GetUserById(UserIdRequest) returns (UserResponse);
+  rpc GetUsersByIds(UserListRequest) returns (UserListResponse);
+  rpc SearchUsers(UserSearchRequest) returns (UserListResponse);
+}
