@@ -12,11 +12,11 @@ UserSearchGo is a Golang gRPC service for managing user details and providing se
     - Easily extendable to support database backends (e.g., PostgreSQL).
 - **Design Patterns:**
     - Repository pattern for data access abstraction.
-    - Decorator pattern for adding cross-cutting concerns (logging, caching).
+    - TODO: Decorator pattern for adding cross-cutting concerns (logging, caching).
     - Factory pattern for constructing services.
     - Singleton pattern for in-memory data management (optional).
 - **Testability:**
-    - Comprehensive unit tests using a mock repository.
+    - Comprehensive unit tests.
 
 ## Getting Started
 
