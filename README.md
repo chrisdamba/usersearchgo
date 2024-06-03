@@ -121,6 +121,7 @@ grpcurl -plaintext -d '{"id": 1}' localhost:50051 user.UserService/GetUserById
 
 **Tip:** Consider using `evans`, a CLI tool for exploring and interacting with gRPC services. It will automatically generate and validate your request and response message.
 
+![](https://github.com/chrisdamba/usersearchgo/run-app.gif)
 
 ### Running Tests
 
