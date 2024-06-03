@@ -32,6 +32,6 @@ func (d *LoggingDecorator) GetUsersByIDs(ids []int32) []*db.User {
 func (d *LoggingDecorator) SearchUsers(fname, city string, phone string, married bool) []*db.User {
 	start := time.Now()
 	users := d.next.SearchUsers(fname, city, phone, married)
-	log.Printf("SearchUsers(fname=%s, city=%s, phone=%d, married=%t) took %v\n", fname, city, phone, married, time.Since(start))
+	log.Printf("SearchUsers(fname=%s, city=%s, phone=%s, married=%t) took %v\n", fname, city, phone, married, time.Since(start))
 	return users
 }
