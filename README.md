@@ -139,6 +139,31 @@ If you make changes to the `proto/user.proto` file, you can regenerate the Go fi
 make proto
 ```
 
+## Docker Setup
+
+### Building the Docker Image
+
+To build the Docker image for the application:
+
+```sh
+docker build -t usersearchgo .
+```
+
+### Running the Docker Container
+
+To run the Docker container:
+
+```sh
+docker run -p 50051:50051 usersearchgo
+```
+
+### Using Docker Compose
+
+If you are using Docker Compose, you can build and run the application with the following command:
+
+```sh
+docker-compose up --build
+```
 
 ## gRPC API
 
